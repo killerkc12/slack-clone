@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import db from '../../firebase'
 import { useState } from 'react';
 import Message from '../Messages/Message';
+import ChatInput from '../ChatInput/ChatInput';
 
 const Chat = () => {
     const {roomId} = useParams()
@@ -61,6 +62,7 @@ const Chat = () => {
                     />
                 ))}
             </div>
+            <ChatInput channelName={roomDetails?.name} channelId={roomId} />
         </div>
     )
 }
